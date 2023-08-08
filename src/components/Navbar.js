@@ -1,12 +1,12 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import CurrentWeather from "./src/screens/CurrentWeather";
-import FutureWeather from "./src/screens/FutureWeather";
+import CurrentWeather from "../screens/CurrentWeather";
+import FutureWeather from "../screens/FutureWeather";
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+export default function Navigation() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
