@@ -31,10 +31,10 @@ const CurrentWeather = () => {
   return (
     <React.Fragment>
       <View style={styles.container1}>
-        <Text>Weather Description: {weather.current.condition.text}</Text>
+        <Text>Weather Condition: {weather.current.condition.text}</Text>
       </View>
       <View style={styles.container2}>
-        <Text>Temperature: {weather.current.temp_c} °C</Text>
+        <Text>Temperature: {weather.current.temp_f} °F</Text>
       </View>
     </React.Fragment>
   );

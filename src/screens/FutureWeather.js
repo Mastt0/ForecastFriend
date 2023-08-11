@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
+import { GetWeather } from "../hooks/GetWeather";
 
-export default function FutureWeather() {
+const FutureWeather = () => {
+  const [loading, error, weather] = GetWeather();
+  const [futureForecast, setFutureForecast] = useState([]);
+
+  useEffect(() => {
+    if (weather && weather.forecast && weather.forecast.forecastday) {
+      // Extract the next 3 days' forecast data
+      const nextThreeDays = weather.forecast.forecastday.slice(1, 4);
+      setFutureForecast(nextThreeDays);
+    }
+  }, [weather]);
+
+  if (loading) {
+    return <Text>Loading...</Text>;
+  }
+
+  if (error) {
+    return <Text>Error: {error}</Text>;
+  }
+
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Screen 2</Text>
+    <View>
+      {futureForecast.map((day) => (
+        <View key={day.date}>
+          <Text>Date: {day.date}</Text>
+          <Text>Condition: {day.day.condition.text}</Text>
+          <Text>Max Temp: {day.day.maxtemp_f}</Text>
+          <Text>Min Temp: {day.day.mintemp_f}</Text>
+        </View>
+      ))}
     </View>
   );
-}
+};
+
+export default FutureWeather;
