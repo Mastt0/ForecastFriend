@@ -30,6 +30,7 @@ const FutureWeather = () => {
           <Text>Condition: {day.day.condition.text}</Text>
           <Text>Max Temp: {day.day.maxtemp_f}</Text>
           <Text>Min Temp: {day.day.mintemp_f}</Text>
+          <Text>Temperature: {day.day.temp_f} °F</Text>
         </View>
       ))}
     </View>

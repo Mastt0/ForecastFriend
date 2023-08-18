@@ -15,3 +15,14 @@
 7. Test app / learn about the proper way to test
 
 8. Finalize project and install locally to phone
+
+## API DATA TO ADD:
+
+-wind_mph
+-gust_mph
+-feelslike_f
+-humidity
+-cloud
+-condition:icon
+
+## For Reference: https://www.weatherapi.com/docs/
