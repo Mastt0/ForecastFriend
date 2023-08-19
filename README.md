@@ -4,7 +4,7 @@
 
 2. Give a background image to screen 1, and a different image to screen 2
 
-3. Create a file of icons linked to the "weather condtion" API property
+3. Create a file of containging an array of icons linked to the "weather condtion" API property
 
 4. Remove top banner
 

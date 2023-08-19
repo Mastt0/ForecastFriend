@@ -7,18 +7,18 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "grey",
-  },
-  container2: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
     backgroundColor: "cyan",
   },
 });
 
 const CurrentWeather = () => {
   const [loading, error, weather] = GetWeather();
+  const currentDate = new Date().toLocaleDateString(undefined, {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   if (loading) {
     return <Text>Loading...</Text>;
@@ -29,14 +29,16 @@ const CurrentWeather = () => {
   }
 
   return (
-    <React.Fragment>
-      <View style={styles.container1}>
-        <Text>Weather Condition: {weather.current.condition.text}</Text>
-      </View>
-      <View style={styles.container2}>
-        <Text>Temperature: {weather.current.temp_f} °F</Text>
-      </View>
-    </React.Fragment>
+    <View style={styles.container1}>
+      <Text> {currentDate}</Text>
+      <Text>Weather Condition: {weather.current.condition.text}</Text>
+      <Text>Temperature: {weather.current.temp_f} °F</Text>
+      <Text>Feels Like: {weather.current.feelslike_f}% </Text>
+      <Text>Humidity: {weather.current.humidity}% </Text>
+      <Text>Cloud Coverage: {weather.current.cloud}% </Text>
+      <Text>Gust Speed: {weather.current.gust_mph} mph </Text>
+      <Text>Wind Speed: {weather.current.wind_mph} mph </Text>
+    </View>
   );
 };
 
