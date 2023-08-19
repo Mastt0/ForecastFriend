@@ -36,8 +36,8 @@ const CurrentWeather = () => {
       <Text>Feels Like: {weather.current.feelslike_f}% </Text>
       <Text>Humidity: {weather.current.humidity}% </Text>
       <Text>Cloud Coverage: {weather.current.cloud}% </Text>
-      <Text>Gust Speed: {weather.current.gust_mph} mph </Text>
       <Text>Wind Speed: {weather.current.wind_mph} mph </Text>
+      <Text>Gust Speed: {weather.current.gust_mph} mph </Text>
     </View>
   );
 };

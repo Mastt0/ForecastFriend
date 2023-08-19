@@ -16,13 +16,29 @@
 
 8. Finalize project and install locally to phone
 
-## API DATA TO ADD:
+## API DATA TO ADD: CurrentWeather
 
--wind_mph
--gust_mph
--feelslike_f
--humidity
--cloud
--condition:icon
+-Weather Icon (condition:icon) (NEED TO ADD)
+-Date (js built in object)
+-Condition
+-Temp
+-High temp for day (NEED TO ADD)
+-Low temp for day (NEED TO ADD)
+-Feels Like
+-Humidity
+-Cloud Coverage
+-Gust Speed
+-Wind Speed
+
+## API DATA TO ADD: FutureWeather
+
+-Weather Icon (condition:icon)
+-Date (js built in object)
+-Condition
+-Temp
+-High temp for day
+-Low temp for day
+-Humidity
+-Wind Speed
 
 ## For Reference: https://www.weatherapi.com/docs/
