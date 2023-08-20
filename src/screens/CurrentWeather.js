@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Image } from "react-native";
 import { GetWeather } from "../hooks/GetWeather";
 
 const styles = StyleSheet.create({
@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "cyan",
+  },
+  weatherIcon: {
+    width: 100,
+    height: 100,
   },
 });
 
@@ -31,6 +35,10 @@ const CurrentWeather = () => {
   return (
     <View style={styles.container1}>
       <Text> {currentDate}</Text>
+      <Image
+        style={styles.weatherIcon}
+        source={{ uri: weather.current.condition.icon }}
+      />
       <Text>Weather Condition: {weather.current.condition.text}</Text>
       <Text>Temperature: {weather.current.temp_f} °F</Text>
       <Text>Feels Like: {weather.current.feelslike_f}% </Text>

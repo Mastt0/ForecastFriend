@@ -22,8 +22,6 @@
 -Date (js built in object)
 -Condition
 -Temp
--High temp for day (NEED TO ADD)
--Low temp for day (NEED TO ADD)
 -Feels Like
 -Humidity
 -Cloud Coverage
