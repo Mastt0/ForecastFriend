@@ -4,7 +4,7 @@
 
 2. Give a background image to screen 1, and a different image to screen 2
 
-3. Create a file of containging an array of icons linked to the "weather condtion" API property
+3. Create a file of containging an array of icons linked to the "weather condtion" API property (ReactIcons)
 
 4. Remove top banner
 
@@ -18,24 +18,23 @@
 
 ## API DATA TO ADD: CurrentWeather
 
--Weather Icon (condition:icon) (NEED TO ADD)
 -Date (js built in object)
 -Condition
 -Temp
--Feels Like
+-Precipiation
 -Humidity
+-Feels Like
 -Cloud Coverage
 -Gust Speed
 -Wind Speed
 
 ## API DATA TO ADD: FutureWeather
 
--Weather Icon (condition:icon)
 -Date (js built in object)
 -Condition
--Temp
 -High temp for day
 -Low temp for day
+-Precipiation
 -Humidity
 -Wind Speed
 

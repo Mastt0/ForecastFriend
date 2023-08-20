@@ -35,14 +35,11 @@ const CurrentWeather = () => {
   return (
     <View style={styles.container1}>
       <Text> {currentDate}</Text>
-      <Image
-        style={styles.weatherIcon}
-        source={{ uri: weather.current.condition.icon }}
-      />
       <Text>Weather Condition: {weather.current.condition.text}</Text>
       <Text>Temperature: {weather.current.temp_f} °F</Text>
-      <Text>Feels Like: {weather.current.feelslike_f}% </Text>
+      <Text>Precipitation: {weather.current.precip_in} in </Text>
       <Text>Humidity: {weather.current.humidity}% </Text>
+      <Text>Feels Like: {weather.current.feelslike_f}% </Text>
       <Text>Cloud Coverage: {weather.current.cloud}% </Text>
       <Text>Wind Speed: {weather.current.wind_mph} mph </Text>
       <Text>Gust Speed: {weather.current.gust_mph} mph </Text>
